@@ -220,7 +220,7 @@ def rotate(row):
 Back to the swap function, we can break it down step by step:
  - For the first chunk of operations that involve switching elements around, we just need to reverse the order of operations.
  - Since we have edited the rotate function, we can also reverse the orders for the rotate functions
- - For the nested for loop with ii and jj, we just need to run the iterations backwards.
+ - For the nested for loop with ```ii``` and ```jj```, we just need to run the iterations backwards.
  - Finally, the inverse of transpose is still the transpose function.
   
 Hence, we can just build the inverse function by simply reversing each step with little modification: 
