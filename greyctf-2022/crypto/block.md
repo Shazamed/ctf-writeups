@@ -269,7 +269,7 @@ def add(block):
 
 Probably the hardest function to form an inverse of. The function adds 2 times of another element to itself and removes any bits above 8 from the number.
 
-Notably the anything in the first row of block will be added with 2 times of value of itself (multiplied by 3).
+Notably the anything in the first row of block will be added with 2 times of the value of itself (multiplied by 3).
 
 So, ```if ((i * 3) % 4) == i and ((i + j) % 4) == j```, we need to divide the original sum by 3 to get the original number. However, since any bits above 8 is removed from the original sum, we need to check if ```block[i][j] % 3 == 0```, if not, we just add 256 or 512 to the value to make it divisible by 3.
 
