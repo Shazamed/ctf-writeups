@@ -1,5 +1,5 @@
 # Block
-## Crypto 375pts (38 solves)
+## Crypto - 375pts (38 solves)
 
 >How do I decrypt this...
 
