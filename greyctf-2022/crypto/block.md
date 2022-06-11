@@ -217,10 +217,13 @@ def rotate(row):
     row[0], row[1], row[2], row[3] =  row[1], row[2], row[3], row[0]
 ```
 
-While the whole function seems daunting, we can just build the inverse function by simply reversing the order of each operation to block. 
-
-
-Reversing the order of each action in swap():
+Back to the swap function, we can break it down step by step:
+ - For the first chunk of operations that involve switching elements around, we just need to reverse the order of operations.
+ - Since we have edited the rotate function, we can also reverse the orders for the rotate functions
+ - For the nested for loop with ii and jj, we just need to run the iterations backwards.
+ - Finally, the inverse of transpose is still the transpose function.
+  
+Hence, we can just build the inverse function by simply reversing each step with little modification: 
 ``` python
 def anti_swap(block):
 
