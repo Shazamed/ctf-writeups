@@ -306,7 +306,17 @@ We can tell that round is called 30 times for each block in the text.
 
 We don't actually need to reverse this function and we can use it as is in our solution
 
-After forming the inverse of the previous functions, we can now feed each block into round for 30 iterations to obtain our flag:
+``` python
+bytes_c = bytearray.fromhex(c)
+int_list = list(bytes_c)
+decrypt = []
+for i in range(0, len(int_list), 16):
+    decrypt += decryptBlock(int_list[i: i + 16]) # changed the name from encryptBlock to decryptBlock
+decrypt = [chr(i) for i in decrypt]
+print("".join(decrypt))
+```
+  
+Now we simply pass each block of the ciphertext into decryptBlock (renamed from encryptBlock) to obtain the flag:
 ```grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}```
 
 # Source
