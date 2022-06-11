@@ -79,7 +79,7 @@ print(matrix_mult)
 The first 8 elements of the matrix gives:
 ``` 253. 240. 224. -16. -16. 234. 239. -13.```
 
-Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negetive result to 0.
+Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negative result to 0.
 
 ``` python
 binary_str = ""
