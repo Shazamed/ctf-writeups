@@ -162,7 +162,7 @@ def sub(block):
         for j in range(4):
             block[i][j] = SUB_KEY[block[i][j]]
 ```
-We can just obtain the previous value by finding the index in SUB_KEY table that holds the same value as block[i][j].
+We can just obtain the previous value by finding the index in ```SUB_KEY``` table that holds the same value as ```block[i][j]```.
 We then iterate backwards as usual.
 
 ``` python
@@ -271,18 +271,18 @@ Probably the hardest function to form an inverse of. The function adds 2 times o
 
 Notably the anything in the first row of block will be added with 2 times of value of itself (multiplied by 3).
 
-So, if ((i * 3) % 4) == i and ((i + j) % 4) == j, we need to divide the original sum by 3 to get the original number. However, since any bits above 8 is removed from the original sum, we need to check if block[i][j] % 0, if not, we just add 256 or 512 to the value to make it divisible by 3.
+So, ```if ((i * 3) % 4) == i and ((i + j) % 4) == j```, we need to divide the original sum by 3 to get the original number. However, since any bits above 8 is removed from the original sum, we need to check if ```block[i][j] % 3 == 0```, if not, we just add 256 or 512 to the value to make it divisible by 3.
 
-Else, if ((i * 3) % 4) != i or ((i + j) % 4) != j, we just subtract 2 times the value of the other element.
+Else, we just subtract 2 times the value of the other element.
 
-Finally we apply block[i][j] &= 0xFF again to convert the negative numbers back to positive.
+Finally we apply ```block[i][j] &= 0xFF``` again to convert the negative numbers back to positive.
 
 ``` python
 def anti_add(block):
     for i in range(3,-1,-1):
         for j in range(3,-1,-1):
             if ((i * 3) % 4) == i and ((i + j) % 4) == j:
-                if (block[i][j]) % 3 == 0:
+                if block[i][j] % 3 == 0:
                     block[i][j] = int(block[i][j]/3)
                 elif (block[i][j] + 256) % 3 == 0:
                     block[i][j] = int((block[i][j] + 256) / 3)
