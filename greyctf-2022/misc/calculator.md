@@ -23,6 +23,6 @@ Ans2: (3 - 2) * (5 + 1) + 3 = 9
 
 This indicates that will be using a prefix notation to calculate the equations.
 
-While there are prefix calculators code out on stackoverflow I've opted to challenge myself to write the algorithmn from scratch.
+While there are prefix calculators code out on stackoverflow I've opted to challenge myself to write the algorithm from scratch.
 
 TODO zzzz
