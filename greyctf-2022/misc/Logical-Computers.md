@@ -82,6 +82,7 @@ The first 8 elements of the matrix gives:
 Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negative result to 0.
 
 ``` python
+matrix_list = np.ndarray.tolist(matrix_mult)[0]
 binary_str = ""
 for idx, i in enumerate(matrix_list):
   if idx % 8 == 0 and idx != 0:
