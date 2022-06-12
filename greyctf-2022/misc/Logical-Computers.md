@@ -65,9 +65,9 @@ From this, we now know that the input string must be 20 chars long.
 
 In a neural network, each node in a layer will have the same number of weights as the number of nodes in the next layer.
 
-So, layer1 has a size of [1280, 160] and layer2 has a size of [1, 1280]
+So, layer1 has a size of [1280, 160] and layer2 has a size of [1, 1280]. You can verify this by running ```print(model.layer1.weight.data.size())```
 
-Knowing this, we simply just obtained the weights from each layer in the trained model and matrix multiplied them together to get a matrix of size 160
+Knowing this, we simply just obtained the weights from each layer in the trained model and matrix multiplied them together to get a matrix of size 160 which may give an indication of the overall weights of each bit.
 
 ```python
 weights1 = model.layer1.weight.data
@@ -81,7 +81,9 @@ print(matrix_mult)
 The first 8 elements of the matrix gives:
 ``` 253. 240. 224. -16. -16. 234. 239. -13.```
 
-Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negative result to 0 and reverse the order of the bits in each byte.
+Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negative result to 0.
+
+After converting, we then reverse back the order of the bits in each byte and decoded the resulting binary to obtain a readable string.
 
 ``` python
 matrix_list = np.ndarray.tolist(matrix_mult)[0]
