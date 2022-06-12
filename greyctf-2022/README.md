@@ -15,7 +15,7 @@ Writeups:
 | Category | Challenge | Points | # of Solves |
 | --- | --- | --- | --- |
 | Crypto | [Block](./crypto/block.md) | 375 | 38 |
-| Misc | [Calculator](./misc/calculator.md) | 50 | 83 |
+| Misc | [Calculator](./misc/Calculator.md) | 50 | 83 |
 | Misc | [Firmware](./misc/Firmware.md) | 50 | 104 |
 | Misc | [Logical Computers](./misc/Logical-Computers.md) | 456 | 23 |
 | RE | [flappy-o](./re/flappy-o.md) | 181 | 61 |
