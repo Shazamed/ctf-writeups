@@ -3,10 +3,7 @@
 
 >Generating data is ez but recovering is >< I lost the mean I used to generate it, can you find the most probable one for me? #bigdata #helpmepliz
 
-
-# Solution
-
-We are given Chall.py
+Chall.py:
 
 ```python
 import numpy as np
@@ -41,9 +38,9 @@ with open("data.txt", "w") as f:
     f.write(", ".join(ps))
 ```
 
-From this, it tells us that 3 means are generated within the range of -30 to 30.
+# Solution
 
-The means are then used to generate multiple samples from a normal distribution with the same mean and standard deviation of 1.
+As stated in the description, our goal is to obtain the 3 means used to generate the dataset in data.txt. From the script, it tells us that 3 means are randomly generated within the range of -30 to 30 using the ```rand()`` function. Next, 800 samples are then generated from a normal distribution with one of the randomly selected 3 means and standard deviation of 1.
 
 Our first step is to visualise the numbers in a histogram graph using matplotlib.
 
