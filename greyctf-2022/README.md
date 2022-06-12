@@ -14,12 +14,14 @@ Writeups:
 
 | Category | Challenge | Points | # of Solves |
 | --- | --- | --- | --- |
+| Crypto | [Baby](./crypto/baby.md) | 331 | 44 |
 | Crypto | [Block](./crypto/block.md) | 375 | 38 |
 | Crypto | [Cube](./crypto/Cube.md) | 271 | 51 |
 | Crypto | [Entry](./crypto/Entry.md) | 50 | 184 |
 | Misc | [Calculator](./misc/Calculator.md) | 50 | 83 |
 | Misc | [Data Degeneration](./misc/Data-Degeneration.md) | 388 | 36 |
 | Misc | [Firmware](./misc/Firmware.md) | 50 | 104 |
+| Misc | [Ghost](./misc/Ghost.md) | 50 | 132 |
 | Misc | [Image Upload](./misc/Image%20Upload.md) | 50 | 257 |
 | Misc | [Logical Computers](./misc/Logical-Computers.md) | 456 | 23 |
 | RE | [flappy-js](./re/flappy-js.md) | 50 | 212 |
