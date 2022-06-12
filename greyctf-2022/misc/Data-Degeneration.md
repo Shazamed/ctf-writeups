@@ -1,5 +1,5 @@
 # Data Degeneration
-## Misc 388 pts (36 solves)
+## Misc - 388 pts (36 solves)
 
 >Generating data is ez but recovering is >< I lost the mean I used to generate it, can you find the most probable one for me? #bigdata #helpmepliz
 
