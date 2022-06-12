@@ -3,6 +3,8 @@
 > Teaching computers is like teaching children, you gotta start simple.
 > Today I taught it to recognize the flag!
 
+# Solution
+
 In this challenge, we are given a chall.py file, and a model.pth file which contains the weights of the trained model.
 
 Looking at chall.py:
@@ -100,7 +102,7 @@ print("".join(binary_list))
 Running the above gives the flag:
 ```grey{sM0rT_mAch1nE5}```
 
-## Source 
+# Source 
 ``` python
 import torch
 import numpy as np
