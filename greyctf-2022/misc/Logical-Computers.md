@@ -1,7 +1,10 @@
 # Logical Computers
+
 ## Misc - 456 pts (23 Solves)
-> Teaching computers is like teaching children, you gotta start simple.
-> Today I taught it to recognize the flag!
+
+Teaching computers is like teaching children, you gotta start simple.
+
+Today I taught it to recognize the flag!
 
 # Solution
 
@@ -44,8 +47,7 @@ if model(in_data) == 1:
 	print("Yay correct! That's the flag!")
 else:
 	print("Awww no...")
-  ```
-
+```
 
 We can tell that the model has 3 layers of in_dim, 1280, and 1 node(s) respectively.
 
@@ -55,17 +57,19 @@ Running the program and entering any input not 20 chars long will give an error 
 Which tells us that the in_dim must be of size 160.
 
 Then looking at the tensorise function:
+
 ```python
 def tensorize(s : str) -> torch.Tensor:
   return torch.Tensor([(1 if (ch >> i) & 1 == 1 else -1) for ch in list(map(ord, s)) for i in range(8)])
 ```
+
 Basically it is equivalent to iterating over each char in the input string, converting them into binary, changing all zeros to -1 and then reversing the order of the bits before adding each bit to the weight.
 
 From this, we now know that the input string must be 20 chars long.
 
 In a neural network, each node in a layer will have the same number of weights as the number of nodes in the next layer.
 
-So, layer1 has a size of [1280, 160] and layer2 has a size of [1, 1280]. You can verify this by running ```print(model.layer1.weight.data.size())```
+So, layer1 has a size of [1280, 160] and layer2 has a size of [1, 1280]. You can verify this by running `print(model.layer1.weight.data.size())`
 
 Knowing this, we can just obtain the weights from each layer in the trained model and matrix multiply them together to get a matrix of size 160. The resultant matrix which may give an indication of the overall weights of each bit.
 
@@ -78,8 +82,8 @@ np_weights2 = weights2.numpy()
 matrix_mult = np.matmul(np_weights2,np_weights1)
 print(matrix_mult)
 ```
-The first 8 elements of the matrix gives:
-``` 253. 240. 224. -16. -16. 234. 239. -13.```
+
+The first 8 elements of the matrix gives: `253. 240. 224. -16. -16. 234. 239. -13.`
 
 Printing and looking at the resultant matrix, we noticed that the each element is either greater than 200 or smaller than 0. So we decided to convert each positive result to 1 and each negative result to 0.
 
@@ -101,10 +105,10 @@ binary_list = [chr(int(binary[::-1], 2)) for binary in binary_str]
 print("".join(binary_list))
 ```
 
-Running the above gives the flag:
-```grey{sM0rT_mAch1nE5}```
+Running the above gives the flag: `grey{sM0rT_mAch1nE5}`
 
 # Source 
+
 ``` python
 import torch
 import numpy as np
@@ -156,4 +160,5 @@ print("".join(binary_list))
 ```
 
 # Flag
+
 ```grey{sM0rT_mAch1nE5}```

@@ -1,12 +1,15 @@
 # Calculator
+
 ## Misc - 50pts (83 solves)
 
->Calculator is a nice invention
+Calculator is a nice invention
 
 # Solution
 
 Connecting to the remote server gives us the following:
-```How fast are you on calculating basic math expression?
+
+```
+How fast are you on calculating basic math expression?
 Answer 100 math questions in 30 seconds to the flag
 
 Operations include: 
@@ -39,7 +42,9 @@ Each node ends when it containes a number.
 
 # Sample problem
 
-```mul add 10 50 neg -2```
+```
+mul add 10 50 neg -2
+```
 
 Given the problem above, we can visualise it as the following expression tree:
 
@@ -92,6 +97,7 @@ grey{prefix_operation_is_easy_to_evaluate_right_W2MQshAYVpGVJPcw}
 
 
 # Source
+
 ``` python
 from pwn import *
 
@@ -150,7 +156,8 @@ s.interactive()
 ```
 
 # Flag
-```grey{prefix_operation_is_easy_to_evaluate_right_W2MQshAYVpGVJPcw}```
+
+`grey{prefix_operation_is_easy_to_evaluate_right_W2MQshAYVpGVJPcw}`
 
 
 

@@ -1,7 +1,8 @@
 # Data Degeneration
+
 ## Misc - 388 pts (36 solves)
 
->Generating data is ez but recovering is >< I lost the mean I used to generate it, can you find the most probable one for me? #bigdata #helpmepliz
+Generating data is ez but recovering is >< I lost the mean I used to generate it, can you find the most probable one for me? #bigdata #helpmepliz
 
 Chall.py:
 
@@ -56,6 +57,7 @@ number_list = [float(n) for n in number_list]
 plt.hist(number_list, bins=150)
 plt.show()
 ```
+
 Running the above code gives us this figure:
 
 ![data histogram](./Data-Degeneration/data-hist.png)
@@ -80,7 +82,9 @@ print(sum(group0)/len(group0))
 print(sum(group1)/len(group1))
 print(sum(group2)/len(group2))
 ```
+
 Running the above code prints:
+
 ```
 -12.338427064508242
 1.957759288444758
@@ -88,6 +92,7 @@ Running the above code prints:
 ```
 
 Now we just need to connect to the remote connection and input our 3 means to obtain our flag:
+
 ```
 Here is your flag: grey{3m_iS_bL4cK_mAg1C}
 ```
@@ -122,6 +127,4 @@ print(sum(group2)/len(group2))
 ```
 
 # Flag
-```
-grey{3m_iS_bL4cK_mAg1C}
-```
+`grey{3m_iS_bL4cK_mAg1C}`

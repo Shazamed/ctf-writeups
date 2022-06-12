@@ -1,7 +1,8 @@
 # Cube
+
 ## Crypto - 271 pts (51 Solves)
 
-> I have a super computer so I can run this!
+I have a super computer so I can run this!
 
 ``` python
 from Crypto.Util.number import bytes_to_long, getPrime, isPrime
@@ -32,20 +33,21 @@ print(c)
 ```
 
 # Solution
+
 This appears to be a RSA problem with a few twists. Which is that the modulus is prime and that the exponent is extremely huge.
 
-Looking at the ```cube``` function, we can determine that in every loop, the value of ```res``` will be cubed. 
-Since there are ```2 ** 100``` loops, the total exponent of the message, m, is equivalent to ```3 ** 2 ** 1000```.
+Looking at the `cube` function, we can determine that in every loop, the value of `res` will be cubed. 
+Since there are `2 ** 100` loops, the total exponent of the message, m, is equivalent to `3 ** 2 ** 1000`.
 
-Additionally, we can easily determine the euler totient function of ```p``` as ```p``` is prime. Giving  ```Φ(p) = p-1```.
-With this we can easily obtain the private key, ```d```, by calculating e<sup>-1</sup> mod Φ(p). Where e<sup>-1</sup> is the modolar inverse of the exponent, e.
+Additionally, we can easily determine the euler totient function of `p` as `p` is prime. Giving `Φ(p) = p-1`.
+With this we can easily obtain the private key, `d`, by calculating e<sup>-1</sup> mod Φ(p). Where e<sup>-1</sup> is the modolar inverse of the exponent, e.
 
 We could express the above in the following python code:
 ``` python
 d = pow(3 ** 2 ** 100,-1,p-1)
 ```
 
-However, running this as is will not give you the private key. The exponent is too large! We need to first simplify e, ```3 ** 2 ** 100```.
+However, running this as is will not give you the private key. The exponent is too large! We need to first simplify e, `3 ** 2 ** 100`.
 The equation, e<sup>-1</sup> mod Φ(p) ≡ d, can be rewritten as  (e mod p-1)<sup>-1</sup> mod p-1 ≡ d. 
 
 We just need to calculate (e mod p-1) before calculating d:
@@ -62,9 +64,10 @@ In python:
 m = pow(c,d,p)
 ```
 Printing m after converting it to bytes will give the plaintext message:
-```grey{CubeIsSquarerThanSquare_FjUFynTNUdTyJu5x}```
+`grey{CubeIsSquarerThanSquare_FjUFynTNUdTyJu5x}`
 
 # Source
+
 ``` python
 from Crypto.Util.number import long_to_bytes
 c = 117161008971867369525278118431420359590253064575766275058434686951139287312472337733007748860692306037011621762414693540474268832444018133392145498303438944989809563579460392165032736630619930502524106312155019251740588974743475569686312108671045987239439227420716606411244839847197214002961245189316124796380
@@ -75,5 +78,7 @@ d = pow(exponent,-1,p-1)
 m = pow(c,d,p)
 print(long_to_bytes(m))
 ```
+
 # Flag
-```grey{CubeIsSquarerThanSquare_FjUFynTNUdTyJu5x}```
+
+`grey{CubeIsSquarerThanSquare_FjUFynTNUdTyJu5x}`

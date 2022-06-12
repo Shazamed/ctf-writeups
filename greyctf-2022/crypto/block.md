@@ -1,7 +1,8 @@
 # Block
+
 ## Crypto - 375pts (38 solves)
 
->How do I decrypt this...
+How do I decrypt this...
 
 # Solution
 
@@ -164,7 +165,7 @@ def sub(block):
         for j in range(4):
             block[i][j] = SUB_KEY[block[i][j]]
 ```
-We can just obtain the previous value by finding the index in ```SUB_KEY``` table that holds the same value as ```block[i][j]```.
+We can just obtain the previous value by finding the index in `SUB_KEY` table that holds the same value as `block[i][j]`.
 We then iterate backwards as usual.
 
 ``` python
@@ -222,7 +223,7 @@ def rotate(row):
 Back to the swap function, we can break it down step by step:
  - For the first chunk of operations that involve switching elements around, we just need to reverse the order of operations.
  - Since we have edited the rotate function, we can also reverse the orders for the rotate functions
- - For the nested for loop with ```ii``` and ```jj```, we just need to run the iterations backwards.
+ - For the nested for loop with `ii` and `jj`, we just need to run the iterations backwards.
  - Finally, the inverse of transpose is still the transpose function.
   
 Hence, we can just build the inverse function by simply reversing each step with little modification: 
@@ -273,11 +274,11 @@ Probably the hardest function to form an inverse of. The function adds 2 times o
 
 Notably the anything in the first row of block will be added with 2 times of the value of itself (multiplied by 3).
 
-So, ```if ((i * 3) % 4) == i and ((i + j) % 4) == j```, we need to divide the original sum by 3 to get the original number. However, since any bits above 8 is removed from the original sum, we need to check if ```block[i][j] % 3 == 0```, if not, we just add 256 or 512 to the value to make it divisible by 3.
+So, `if ((i * 3) % 4) == i and ((i + j) % 4) == j`, we need to divide the original sum by 3 to get the original number. However, since any bits above 8 is removed from the original sum, we need to check if `block[i][j] % 3 == 0`, if not, we just add 256 or 512 to the value to make it divisible by 3.
 
 Else, we just subtract 2 times the value of the other element.
 
-Finally we apply ```block[i][j] &= 0xFF``` again to convert the negative numbers back to positive.
+Finally we apply `block[i][j] &= 0xFF` again to convert the negative numbers back to positive.
 
 ``` python
 def anti_add(block):
@@ -319,7 +320,7 @@ print("".join(decrypt))
 ```
   
 Now we simply pass each block of the ciphertext into decryptBlock (renamed from encryptBlock) to obtain the flag:
-```grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}```
+`grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}`
 
 # Source
 ``` python
@@ -442,5 +443,5 @@ print("".join(decrypt))
 ```
 
 # Flag
-```grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}```
+`grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}`
 
