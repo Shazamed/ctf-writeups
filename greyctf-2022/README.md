@@ -20,6 +20,7 @@ Writeups:
 | Misc | [Calculator](./misc/Calculator.md) | 50 | 83 |
 | Misc | [Data Degeneration](./misc/Data-Degeneration.md) | 388 | 36 |
 | Misc | [Firmware](./misc/Firmware.md) | 50 | 104 |
+| Misc | [Image Upload](./misc/Image%20Upload.md) | 50 | 257 |
 | Misc | [Logical Computers](./misc/Logical-Computers.md) | 456 | 23 |
 | RE | [flappy-js](./re/flappy-js.md) | 50 | 212 |
 | RE | [flappy-o](./re/flappy-o.md) | 181 | 61 |
