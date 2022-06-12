@@ -48,7 +48,7 @@ d = pow(3 ** 2 ** 100,-1,p-1)
 However, running this as is will not give you the private key. The exponent is too large! We need to first simplify e, ```3 ** 2 ** 100```.
 The equation, e<sup>-1</sup> mod Φ(p) ≡ d, can be rewritten as  (e mod p-1)<sup>-1</sup> mod p-1 ≡ d. 
 
-We just need to calculate (e mod p-1) first using before calculating d:
+We just need to calculate (e mod p-1) before calculating d:
 ``` python
 exponent = pow(3, 2 ** 100, p-1)
 d = pow(exponent,-1,p-1)
