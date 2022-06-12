@@ -84,7 +84,7 @@ def recursion(i):
 result = str(recursion(i)[1])
 ```
 
-Now we just need to send the calculate and send the results of 100 different equations to get the flag:
+Now we just need to send the calculated results of 100 different equations to get the flag:
 ```
 You done it in 15.452574014663696 seconds!
 grey{prefix_operation_is_easy_to_evaluate_right_W2MQshAYVpGVJPcw}
