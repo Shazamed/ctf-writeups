@@ -16,7 +16,7 @@ Writeups:
 | --- | --- | --- | --- |
 | Crypto | [Block](./crypto/block.md) | 375 | 38 |
 | Misc | [Calculator](./misc/Calculator.md) | 50 | 83 |
-| Misc | [Data Degeneration](./misc/Data-degeneration.md) | 388 | 36 |
+| Misc | [Data Degeneration](./misc/Data-Degeneration.md) | 388 | 36 |
 | Misc | [Firmware](./misc/Firmware.md) | 50 | 104 |
 | Misc | [Logical Computers](./misc/Logical-Computers.md) | 456 | 23 |
 | RE | [flappy-o](./re/flappy-o.md) | 181 | 61 |
