@@ -15,6 +15,7 @@ Writeups:
 | Category | Challenge | Points | # of Solves |
 | --- | --- | --- | --- |
 | Crypto | [Block](./crypto/block.md) | 375 | 38 |
+| Crypto | [Entry](./crypto/Entry.md) | 50 | 184 |
 | Misc | [Calculator](./misc/Calculator.md) | 50 | 83 |
 | Misc | [Data Degeneration](./misc/Data-Degeneration.md) | 388 | 36 |
 | Misc | [Firmware](./misc/Firmware.md) | 50 | 104 |
