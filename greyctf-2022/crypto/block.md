@@ -3,9 +3,9 @@
 
 >How do I decrypt this...
 
-We are provided with main.py:
-
 # Solution
+
+We are provided with main.py:
 
 <details>
   <summary>main.py</summary>
