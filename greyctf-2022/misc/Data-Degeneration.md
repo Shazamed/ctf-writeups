@@ -59,11 +59,11 @@ number_list = [float(n) for n in number_list]
 plt.hist(number_list, bins=150)
 plt.show()
 ```
-Running the above code gives the figure:
+Running the above code gives us this figure:
 
 ![data histogram](./Data-Degeneration/data-hist.png)
 
-This shows 3 distinct normal distrubution curves.
+This shows 3 distinct normal distrubution curves with means of around -13, 2, and 15.
 
 Knowing this we can just simply seperate the numbers into 3 distinct groups and find the mean of each group to obtain the 3 means.
 
