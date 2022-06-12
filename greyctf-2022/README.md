@@ -24,5 +24,6 @@ Writeups:
 | RE | [flappy-js](./re/flappy-js.md) | 50 | 212 |
 | RE | [flappy-o](./re/flappy-o.md) | 181 | 61 |
 | RE | [flappy-o2](./re/flappy-o2.md) | 388 | 36 |
+| RE | [Memory Game (Part 1)](./re/Memory%20Game%20(Part%201).md) | 50 | 156 |
 | Web | [Too Fast](./web/Too%20Fast.md) | 50 | 92 |
 | Welcome | [Welcome](./welcome/Welcome.md) | 50 | 360 |
