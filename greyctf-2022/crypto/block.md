@@ -5,6 +5,8 @@
 
 We are provided with main.py:
 
+# Solution
+
 <details>
   <summary>main.py</summary>
   
@@ -439,6 +441,6 @@ decrypt = [chr(i) for i in decrypt]
 print("".join(decrypt))
 ```
 
-
-
+# Flag
+```grey{I_think_I_forgot_to_put_in_my_secret..._3xPDBY9Xq5PtqjVA}```
 
