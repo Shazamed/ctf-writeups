@@ -150,3 +150,6 @@ binary_str = binary_str.split(" ")
 binary_list = [chr(int(binary[::-1],2)) for binary in binary_str]
 print("".join(binary_list))
 ```
+
+# Flag
+```grey{sM0rT_mAch1nE5}```
