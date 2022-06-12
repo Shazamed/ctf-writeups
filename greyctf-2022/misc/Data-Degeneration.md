@@ -61,7 +61,7 @@ plt.show()
 ```
 Running the above code gives the figure:
 
-![data histogram](misc/Data-Degeneration/data-hist.png)
+![data histogram](./Data-Degeneration/data-hist.png)
 
 This shows 3 distinct normal distrubution curves.
 
