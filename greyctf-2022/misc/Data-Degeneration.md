@@ -40,7 +40,7 @@ with open("data.txt", "w") as f:
 
 # Solution
 
-As stated in the description, our goal is to obtain the 3 means used to generate the dataset in data.txt. From the script, it tells us that 3 means are randomly generated within the range of -30 to 30 using the ```rand`` function. Next, 800 samples are then generated from a normal distribution with one of the randomly selected 3 means and standard deviation of 1.
+As stated in the description, our goal is to obtain the 3 means used to generate the dataset in data.txt. From the script, it tells us that 3 means are randomly generated within the range of -30 to 30 using the `rand` function. Next, 800 samples are then generated from a normal distribution with one of the randomly selected 3 means and standard deviation of 1.
 
 Our first step is to visualise the numbers in a histogram graph using matplotlib.
 
@@ -62,7 +62,7 @@ Running the above code gives us this figure:
 
 This shows 3 distinct normal distrubution curves with means of around -13, 2, and 15.
 
-Knowing this we can just simply seperate the numbers into 3 distinct groups and find the mean of each group to obtain the 3 means.
+Knowing this we can just simply separate the numbers into 3 distinct groups and find the mean of each group to obtain the 3 means.
 
 ```python
 group0 = []
