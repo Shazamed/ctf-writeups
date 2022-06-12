@@ -50,12 +50,12 @@ Given the problem above, we can visualise it as the following expression tree:
 - Now since the next node contains a number (10), we stop creating any new branches and return to the previous node.
 - Now we create a right branch in the "add" node containing the next value and move down that branch.
 - Similarly, we encounter a number (50) and return back to the previous node.
-- The "add" node now has 2 numbers which causes it to return the sum of both numbers back to the "mul" node.
+- The "add" node now has 2 numbers which causes it to return the sum (60) of both numbers back to the "mul" node.
 - "Mul" node creates a rightwards branch containing "neg"
 - "Neg" creates a leftward branch containing -2
 - The node containing -2 returns itself to the previous node
-- "Neg" now has a number and returns the negative of that number to "mul"
-- "Mul" sums the 2 numbers and returns the final result.
+- "Neg" now has a number and returns the negative of that number (2) to "mul"
+- "Mul" sums the 2 numbers and returns the final result. (120)
 
 We now can create a recursive function that does all of the above for us.
 
