@@ -35,7 +35,7 @@ print(c)
 This appears to be a RSA problem with a few twists. Which is that the modulus is prime and that the exponent is extremely huge.
 
 Looking at the ```cube``` function, we can determine that in every loop, the value of ```res``` will be cubed. 
-Since there are ```2 ** 100``` loops, the total exponent is equivalent to ```3 ** 2 ** 1000```.
+Since there are ```2 ** 100``` loops, the total exponent of the message, m, is equivalent to ```3 ** 2 ** 1000```.
 
 Additionally, we can easily determine the euler totient function of ```p``` as ```p``` is prime. Giving  ```Φ(p) = p-1```.
 With this we can easily obtain the private key, ```d```, by calculating e<sup>-1</sup> mod Φ(p). Where e<sup>-1</sup> is the modolar inverse of the exponent, e.
