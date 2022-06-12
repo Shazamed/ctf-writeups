@@ -67,7 +67,7 @@ In a neural network, each node in a layer will have the same number of weights a
 
 So, layer1 has a size of [1280, 160] and layer2 has a size of [1, 1280]. You can verify this by running ```print(model.layer1.weight.data.size())```
 
-Knowing this, we simply just obtained the weights from each layer in the trained model and matrix multiplied them together to get a matrix of size 160 which may give an indication of the overall weights of each bit.
+Knowing this, we can just obtain the weights from each layer in the trained model and matrix multiply them together to get a matrix of size 160. The resultant matrix which may give an indication of the overall weights of each bit.
 
 ```python
 weights1 = model.layer1.weight.data
